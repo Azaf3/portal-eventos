@@ -8,35 +8,260 @@
 <body>
   <header>
     <h1>Portal de Eventos Educacionais e Culturais</h1>
+
+    <!-- Barra de pesquisa -->
+    <form class="search-bar" action="#" method="get">
+      <input type="text" name="q" placeholder="Buscar eventos..." aria-label="Buscar eventos">
+      <button type="submit">🔍</button>
+    </form>
+
+    <!-- Opções de filtro -->
+    <div class="filtros-opcoes">
+      <!-- Opção 1: Categoria do evento (nome do evento) -->
+      <label for="evento-nome">Selecionar evento:</label>
+      <select id="evento-nome" name="evento-nome">
+        <option value="">Todos</option>
+        <option>Congresso de Educação 2025</option>
+        <option>Festival Cultural Online</option>
+        <option>Feira de Ciências 2025</option>
+        <option>Workshop de Tecnologia</option>
+        <option>Seminário de Literatura Brasileira</option>
+        <option>Palestra Motivacional Online</option>
+        <option>Encontro de Jovens Cientistas</option>
+        <option>Simpósio de Inovação Digital</option>
+        <option>Mostra de Artes Visuais</option>
+        <option>Congresso Internacional de Educação Online</option>
+        <option>Semana do Meio Ambiente</option>
+        <option>Maratona de Programação Online</option>
+      </select>
+
+      <!-- Opção 2: Data dos eventos -->
+      <label for="evento-data">Data do evento:</label>
+      <select id="evento-data" name="evento-data">
+        <option value="">Todas</option>
+        <option>10/09/2025</option>
+        <option>15/09/2025</option>
+        <option>20/09/2025</option>
+        <option>25/09/2025</option>
+        <option>30/09/2025</option>
+        <option>05/10/2025</option>
+        <option>12/10/2025</option>
+        <option>18/10/2025</option>
+        <option>22/10/2025</option>
+        <option>28/10/2025</option>
+        <option>03/11/2025</option>
+        <option>10/11/2025</option>
+      </select>
+
+      <!-- Opção 3: Tipo de evento -->
+      <label for="evento-tipo">Tipo de evento:</label>
+      <select id="evento-tipo" name="evento-tipo">
+        <option value="">Todos</option>
+        <option>Presencial</option>
+        <option>Online</option>
+      </select>
+    </div>
+
     <nav>
       <a href="index.html">Início</a>
       <a href="eventos.html">Eventos</a>
-      <a href="#">Sobre</a>
+      <a href="detalhes.html">Sobre</a>
     </nav>
   </header>
 
   <main>
+    <!-- Seção de Destaques -->
     <section class="destaques">
       <h2>Eventos em Destaque</h2>
       <div class="eventos-grid">
-        <div class="card">
-          <img src="img/exemplo.jpg" alt="Evento 1">
-          <h3>Evento 1</h3>
-          <p>Data: 10/09/2025</p>
-          <a href="detalhes.html">Ver detalhes</a>
-        </div>
-        <div class="card">
-          <img src="img/exemplo.jpg" alt="Evento 2">
-          <h3>Evento 2</h3>
-          <p>Data: 15/09/2025</p>
-          <a href="detalhes.html">Ver detalhes</a>
-        </div>
+        <!-- Evento presencial em Brasília -->
+        <article class="card">
+          <img src="img/exemplo.jpg" alt="Congresso de Educação 2025">
+          <div class="card-content">
+            <h3>Congresso de Educação 2025</h3>
+            <p><time datetime="2025-09-10">10/09/2025</time></p>
+            <p>📍 Brasília-DF | 🎫 Presencial</p>
+            <a href="detalhes.html" class="btn" title="Debates e workshops sobre inovação educacional.">Debates e workshops sobre inovação educacional.</a>
+          </div>
+        </article>
+
+        <!-- Evento online -->
+        <article class="card">
+          <img src="img/exemplo.jpg" alt="Festival Cultural Online">
+          <div class="card-content">
+            <h3>Festival Cultural Online</h3>
+            <p><time datetime="2025-09-15">15/09/2025</time></p>
+            <p>💻 Online | Entrada Gratuita</p>
+            <a href="detalhes.html" class="btn" title="Apresentações artísticas transmitidas ao vivo.">Apresentações artísticas ao vivo.</a>
+          </div>
+        </article>
+
+        <!-- Evento presencial em Brasília -->
+        <article class="card">
+          <img src="img/exemplo.jpg" alt="Feira de Ciências 2025">
+          <div class="card-content">
+            <h3>Feira de Ciências 2025</h3>
+            <p><time datetime="2025-09-20">20/09/2025</time></p>
+            <p>📍 Brasília-DF | 🎫 Presencial</p>
+            <a href="detalhes.html" class="btn" title="Exposição de projetos científicos escolares.">Exposição de projetos científicos escolares.</a>
+          </div>
+        </article>
+
+        <!-- Evento online -->
+        <article class="card">
+          <img src="img/exemplo.jpg" alt="Workshop de Tecnologia">
+          <div class="card-content">
+            <h3>Workshop de Tecnologia</h3>
+            <p><time datetime="2025-09-25">25/09/2025</time></p>
+            <p>💻 Online | Inscrição Necessária</p>
+            <a href="detalhes.html" class="btn" title="Capacitação sobre inovação digital.">Capacitação sobre inovação digital.</a>
+          </div>
+        </article>
+
+        <!-- Evento presencial em Brasília -->
+        <article class="card">
+          <img src="img/exemplo.jpg" alt="Seminário de Literatura Brasileira">
+          <div class="card-content">
+            <h3>Seminário de Literatura Brasileira</h3>
+            <p><time datetime="2025-09-30">30/09/2025</time></p>
+            <p>📍 Brasília-DF | 🎫 Presencial</p>
+            <a href="detalhes.html" class="btn" title="Discussão sobre obras clássicas e contemporâneas.">Discussão sobre obras clássicas e contemporâneas.</a>
+          </div>
+        </article>
+
+        <!-- Evento online -->
+        <article class="card">
+          <img src="img/exemplo.jpg" alt="Palestra Motivacional Online">
+          <div class="card-content">
+            <h3>Palestra Motivacional Online</h3>
+            <p><time datetime="2025-10-05">05/10/2025</time></p>
+            <p>💻 Online | Gratuito</p>
+            <a href="detalhes.html" class="btn" title="Dicas para desenvolvimento pessoal e profissional.">Dicas para desenvolvimento pessoal e profissional.</a>
+          </div>
+        </article>
+
+        <!-- Evento presencial em Brasília -->
+        <article class="card">
+          <img src="img/exemplo.jpg" alt="Encontro de Jovens Cientistas">
+          <div class="card-content">
+            <h3>Encontro de Jovens Cientistas</h3>
+            <p><time datetime="2025-10-12">12/10/2025</time></p>
+            <p>📍 Brasília-DF | 🎫 Presencial</p>
+            <a href="detalhes.html" class="btn" title="Troca de experiências e apresentação de pesquisas.">Troca de experiências e apresentação de pesquisas.</a>
+          </div>
+        </article>
+
+        <!-- Evento online -->
+        <article class="card">
+          <img src="img/exemplo.jpg" alt="Simpósio de Inovação Digital">
+          <div class="card-content">
+            <h3>Simpósio de Inovação Digital</h3>
+            <p><time datetime="2025-10-18">18/10/2025</time></p>
+            <p>💻 Online | Inscrição Gratuita</p>
+            <a href="detalhes.html" class="btn" title="Painéis sobre tendências tecnológicas e mercado.">Painéis sobre tendências tecnológicas e mercado.</a>
+          </div>
+        </article>
+
+        <!-- Evento presencial em Brasília -->
+        <article class="card">
+          <img src="img/exemplo.jpg" alt="Mostra de Artes Visuais">
+          <div class="card-content">
+            <h3>Mostra de Artes Visuais</h3>
+            <p><time datetime="2025-10-22">22/10/2025</time></p>
+            <p>📍 Brasília-DF | 🎫 Presencial</p>
+            <a href="detalhes.html" class="btn" title="Exposição de obras de artistas locais e nacionais.">Exposição de obras de artistas locais e nacionais.</a>
+          </div>
+        </article>
+
+        <!-- Evento online -->
+        <article class="card">
+          <img src="img/exemplo.jpg" alt="Congresso Internacional de Educação Online">
+          <div class="card-content">
+            <h3>Congresso Internacional de Educação Online</h3>
+            <p><time datetime="2025-10-28">28/10/2025</time></p>
+            <p>💻 Online | Pago</p>
+            <a href="detalhes.html" class="btn" title="Palestras com especialistas internacionais.">Palestras com especialistas internacionais.</a>
+          </div>
+        </article>
+
+        <!-- Evento presencial em Brasília -->
+        <article class="card">
+          <img src="img/exemplo.jpg" alt="Semana do Meio Ambiente">
+          <div class="card-content">
+            <h3>Semana do Meio Ambiente</h3>
+            <p><time datetime="2025-11-03">03/11/2025</time></p>
+            <p>📍 Brasília-DF | 🎫 Presencial</p>
+            <a href="detalhes.html" class="btn" title="Atividades educativas e palestras sobre sustentabilidade.">Atividades educativas e palestras sobre sustentabilidade.</a>
+          </div>
+        </article>
+
+        <!-- Evento online -->
+        <article class="card">
+          <img src="img/exemplo.jpg" alt="Maratona de Programação Online">
+          <div class="card-content">
+            <h3>Maratona de Programação Online</h3>
+            <p><time datetime="2025-11-10">10/11/2025</time></p>
+            <p>💻 Online | Competição</p>
+            <a href="detalhes.html" class="btn" title="Desafios de lógica e programação para equipes.">Desafios de lógica e programação para equipes.</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Outra seção: por categoria -->
+    <section class="educacao">
+      <h2>Eventos de Educação</h2>
+      <div class="eventos-grid">
+        <!-- mais cards -->
       </div>
     </section>
   </main>
 
+  <!-- Rodapé padrão para todas as páginas -->
   <footer>
-    <p>&copy; 2025 - Portal de Eventos</p>
+    <p>&copy; 2025 - Portal de Eventos Educacionais e Culturais</p>
+    <p>Contato: contato@portaleventos.com.br</p>
+    <p>
+      <a href="https://facebook.com" target="_blank">Facebook</a> |
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </p>
   </footer>
+
+  <script>
+function filtrarEventos() {
+  const nome = document.getElementById('evento-nome').value.toLowerCase();
+  const data = document.getElementById('evento-data').value;
+  const tipo = document.getElementById('evento-tipo').value.toLowerCase();
+
+  document.querySelectorAll('.card').forEach(card => {
+    const titulo = card.querySelector('h3').textContent.toLowerCase();
+    const dataEvento = card.querySelector('time').textContent;
+    const tipoEvento = card.innerHTML.toLowerCase().includes('online') ? 'online' : 'presencial';
+
+    let mostrar = true;
+
+    if (nome && !titulo.includes(nome)) mostrar = false;
+    if (data && dataEvento !== data) mostrar = false;
+    if (tipo && tipoEvento !== tipo) mostrar = false;
+
+    card.style.display = mostrar ? '' : 'none';
+  });
+}
+
+// Eventos de mudança nos filtros
+document.getElementById('evento-nome').addEventListener('change', filtrarEventos);
+document.getElementById('evento-data').addEventListener('change', filtrarEventos);
+document.getElementById('evento-tipo').addEventListener('change', filtrarEventos);
+
+// Mantém a busca funcionando junto com os filtros
+document.querySelector('.search-bar').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const termo = this.q.value.toLowerCase();
+  document.querySelectorAll('.card').forEach(card => {
+    const titulo = card.querySelector('h3').textContent.toLowerCase();
+    card.style.display = titulo.includes(termo) || termo === '' ? '' : 'none';
+  });
+});
+</script>
 </body>
 </html>
