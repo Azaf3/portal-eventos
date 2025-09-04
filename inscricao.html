@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscrição em Eventos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Inscrição em Eventos</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="detalhes.html">Sobre</a>
+      <a href="inscricao.html">Inscrever-se</a> <!-- nova aba -->
+    </nav>
+  </header>
+
+  <main>
+    <section class="formulario-container">
+      <h2>Preencha seus dados para se inscrever</h2>
+      <form>
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+
+        <label for="evento">Evento</label>
+        <select id="evento" name="evento" required>
+          <option value="">Selecione o evento</option>
+          <option>Congresso de Educação 2025</option>
+          <option>Workshop de Tecnologia</option>
+          <option>Feira de Ciências 2025</option>
+          <option>Maratona de Programação Online</option>
+          <option>Semana do Meio Ambiente</option>
+        </select>
+
+        <button type="submit" class="btn">Enviar Inscrição</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Portal de Eventos Educacionais e Culturais</p>
+  </footer>
+</body>
+</html>
