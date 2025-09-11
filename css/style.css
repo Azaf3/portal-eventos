@@ -1,4 +1,4 @@
-/* Reset simples */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +9,12 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: #333333;
-  background: #F8F6F1; /* creme suave */
+  background: #F8F6F1;
 }
 
-
-
+/* CABEÇALHO */
 header {
-  background: #EAE7DC; /* bege claro */
+  background: #EAE7DC;
   color: #333;
   padding: 1rem;
   text-align: center;
@@ -26,7 +25,7 @@ header h1 {
 }
 
 nav a {
-  color: #6C584C; /* marrom suave */
+  color: #6C584C;
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
@@ -34,7 +33,7 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
-  color: #A27B5C; /* destaque suave */
+  color: #A27B5C;
 }
 
 main {
@@ -43,17 +42,30 @@ main {
 
 h2 {
   margin-bottom: 1rem;
-  color: #6C584C; /* marrom esverdeado */
+  color: #6C584C;
 }
 
-.eventos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/*EVENTOS*/
+#cards-container {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
+#cards-container .col-md-4 {
+  display: flex;
+}
+
+#cards-container .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ESTILO DOS CARDS */
 .card {
-  background: #F5EFE6; /* tom creme dos cards */
+  background: #F5EFE6;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
@@ -70,14 +82,17 @@ h2 {
   width: 100%;
   height: 160px;
   object-fit: cover;
-  background: #EDEBE6; /* tom creme levemente mais escuro */
+  background: #EDEBE6;
 }
 
-.card-content {
+.card-body {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.card h3 {
+.card h5 {
   margin-bottom: .5rem;
   color: #333333;
 }
@@ -91,27 +106,20 @@ h2 {
 .btn {
   display: inline-block;
   padding: .5rem 1rem;
-  background: #A27B5C; /* botão com destaque */
+  background: #A27B5C;
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
   font-size: 0.9rem;
   border: none;
+  margin-top: auto;
 }
 
 .btn:hover {
-  background: #6C584C; /* hover mais escuro */
+  background: #6C584C;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  background: #EAE7DC;
-  color: #333;
-}
-
-/* Barra de busca */
+/* BARRA DE BUSCA */
 .search-bar {
   display: flex;
   gap: 8px;
@@ -123,14 +131,14 @@ footer {
   border: 1px solid #CCC;
   border-radius: 4px;
   flex: 1;
-  background: #FDFCF9; /* branco suave */
+  background: #FDFCF9;
   color: #333;
 }
 
 .search-bar button {
   padding: 8px 12px;
   border: none;
-  background: #A27B5C; /* botão */
+  background: #A27B5C;
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
@@ -140,7 +148,7 @@ footer {
   background: #6C584C;
 }
 
-/* Filtros */
+/* FILTROS */
 .filtros-opcoes {
   display: flex;
   flex-wrap: wrap;
@@ -160,11 +168,20 @@ footer {
   padding: 6px;
   border-radius: 4px;
   border: 1px solid #CCC;
-  background: #FDFCF9; /* branco suave */
+  background: #FDFCF9;
   color: #333;
 }
 
-/* --- ESTILO DA PÁGINA DE DETALHES (SOBRE) --- */
+/* RODAPÉ */
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: #EAE7DC;
+  color: #333;
+}
+
+/* DETALHES (SOBRE) */
 .sobre-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -173,8 +190,7 @@ footer {
 }
 
 .sobre-card {
-  background: #F5EFE6; /* segue estilo dos cards */
-  border-radius: 16px;
+  background: #F5EFE6;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   padding: 2rem 1.2rem 1.2rem 1.2rem;
   text-align: center;
@@ -207,6 +223,7 @@ footer {
   line-height: 1.5;
 }
 
+
 @media (max-width: 600px) {
   .sobre-card {
     padding: 1.2rem 0.7rem;
@@ -215,17 +232,17 @@ footer {
     width: 40px;
     height: 40px;
   }
+  .card img {
+    height: 140px;
+  }
 }
 
-/* ========================================================
-   ESTILO DA ABA DE INSCRIÇÕES
-   ======================================================== */
-
+/* FORMULÁRIOS DE INSCRIÇÃO */
 .form-section {
   max-width: 600px;
   margin: 40px auto;
   padding: 30px 35px;
-  background: #F5EFE6; /* segue o tom creme dos cards */
+  background: #F5EFE6;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   border: 1px solid #DDD;
@@ -234,7 +251,7 @@ footer {
 .form-section h2 {
   text-align: center;
   margin-bottom: 25px;
-  color: #6C584C; /* marrom suave */
+  color: #6C584C;
 }
 
 .inscricao-form label {
@@ -251,14 +268,14 @@ footer {
   margin-bottom: 20px;
   border: 1px solid #CCC;
   border-radius: 8px;
-  background: #FDFCF9; /* branco suave */
+  background: #FDFCF9;
   color: #333;
   transition: border-color 0.3s;
 }
 
 .inscricao-form input:focus,
 .inscricao-form select:focus {
-  border-color: #A27B5C; /* destaque ao focar */
+  border-color: #A27B5C;
   outline: none;
 }
 
@@ -266,7 +283,7 @@ footer {
   display: block;
   width: 100%;
   padding: 14px;
-  background: #A27B5C; /* botão com destaque */
+  background: #A27B5C;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -277,13 +294,12 @@ footer {
 }
 
 .inscricao-form .btn:hover {
-  background: #6C584C; /* hover mais escuro */
+  background: #6C584C;
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE FORMULÁRIOS */
 @media (max-width: 600px) {
   .form-section {
     padding: 20px;
   }
 }
-
