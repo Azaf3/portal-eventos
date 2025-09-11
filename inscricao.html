@@ -3,50 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <title>Inscrição em Eventos</title>
-  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Inscrição em Eventos</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="eventos.html">Eventos</a>
-      <a href="detalhes.html">Sobre</a>
-      <a href="inscricao.html">Inscrever-se</a> <!-- nova aba -->
-    </nav>
-  </header>
 
-  <main>
-    <section class="formulario-container">
-      <h2>Preencha seus dados para se inscrever</h2>
-      <form>
-        <label for="nome">Nome Completo</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+<!-- Navbar -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">Portal de Eventos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="detalhes.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link active" href="inscricao.html">Inscrever-se</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
-        <label for="telefone">Telefone</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+<!-- Conteúdo principal -->
+<main class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="card shadow border-0">
+        <div class="card-body p-4">
+          <h2 class="card-title text-center mb-4">Inscreva-se no Evento</h2>
 
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+          <!-- Alerta de sucesso -->
+          <div id="successMessage" class="alert alert-success d-none" role="alert">
+            🎉 Sua inscrição foi enviada com sucesso!
+          </div>
 
-        <label for="evento">Evento</label>
-        <select id="evento" name="evento" required>
-          <option value="">Selecione o evento</option>
-          <option>Congresso de Educação 2025</option>
-          <option>Workshop de Tecnologia</option>
-          <option>Feira de Ciências 2025</option>
-          <option>Maratona de Programação Online</option>
-          <option>Semana do Meio Ambiente</option>
-        </select>
+          <form id="inscricaoForm" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome Completo</label>
+              <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
+              <div class="invalid-feedback">Por favor, insira seu nome completo.</div>
+            </div>
 
-        <button type="submit" class="btn">Enviar Inscrição</button>
-      </form>
-    </section>
-  </main>
+            <div class="mb-3">
+              <label for="telefone" class="form-label">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(XX) XXXXX-XXXX" required>
+              <div class="invalid-feedback">Informe um número de telefone válido.</div>
+            </div>
 
-  <footer>
-    <p>&copy; 2025 - Portal de Eventos Educacionais e Culturais</p>
-  </footer>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@exemplo.com" required>
+              <div class="invalid-feedback">Digite um e-mail válido.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="evento" class="form-label">Evento</label>
+              <select id="evento" name="evento" class="form-select" required>
+                <option value="">Selecione o evento</option>
+                <option>Congresso de Educação 2025</option>
+                <option>Workshop de Tecnologia</option>
+                <option>Feira de Ciências 2025</option>
+                <option>Maratona de Programação Online</option>
+                <option>Semana do Meio Ambiente</option>
+              </select>
+              <div class="invalid-feedback">Selecione um evento para continuar.</div>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Enviar Inscrição</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-light text-center py-4">
+  <p>&copy; 2025 - Portal de Eventos Educacionais e Culturais</p>
+  <p>Contato: contato@portaleventos.com.br</p>
+  <p>
+    <a href="https://facebook.com" target="_blank" class="text-light">Facebook</a> |
+    <a href="https://instagram.com" target="_blank" class="text-light">Instagram</a>
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Validação do Bootstrap
+  (() => {
+    'use strict'
+    const form = document.getElementById('inscricaoForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // impede envio real
+
+      if (!form.checkValidity()) {
+        event.stopPropagation();
+      } else {
+        // Mostra mensagem de sucesso
+        successMessage.classList.remove('d-none');
+        form.reset(); // limpa os campos
+        form.classList.remove('was-validated');
+        return;
+      }
+
+      form.classList.add('was-validated');
+    }, false);
+  })();
+</script>
 </body>
 </html>
